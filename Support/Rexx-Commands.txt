@@ -1,0 +1,147 @@
+# Should have already been run for you
+npm install
+npm install -g gulp
+
+#
+# Create profiles
+#
+rexx rexxfile setupProfiles
+
+#
+# Check Status
+#
+zowe zosmf check status
+
+zowe files list ds "CUST013.MTE.*"
+
+zowe ops show resource GS13001V
+
+
+#
+# Download Patch
+#
+zowe files download uf "/u/users/baumi07/SO07038" -f "bin/SO07038" -b
+
+ls bin
+
+#
+# Upload Patch
+#
+zowe files upload ftu "bin/SO07038" "/u/users/cust013/SO07038" -b
+
+zowe files list uss "/u/users/cust013"
+
+#
+# Look at JCL
+#
+zowe files download am "CUST013.MTE.JCL" -e jcl 
+
+#
+# Run SMPE Receive Job
+#
+zowe jobs submit ds "CUST013.MTE.JCL(RECEIVE)" -d "job-archive/receive"
+
+zowe jobs submit ds "CUST013.MTE.JCL(RECEIVE)" -d "job-archive/receive" --rfj
+
+#
+# Run Apply Check job
+#
+zowe jobs submit ds "CUST013.MTE.JCL(APPLYCHK)" -d "job-archive/applyCheck"
+
+#
+# Run SMPE Apply job
+#
+zowe jobs submit ds "CUST013.MTE.JCL(APPLY)" -d "job-archive/apply" --rfj
+
+#
+# Stop resources
+#
+rexx rexxfile stop
+
+#
+# Copy SMPE Lib
+#
+rexx rexxfile copy
+
+#
+# Execute Workflow
+#
+rexx rexxfile restartWorkflow
+
+#
+# APF Authorization
+#
+rexx rexxfile apf
+
+#
+# Restart SYSVIEW using OPS/MVS SSM
+#
+rexx rexxfile start
+
+zowe jobs submit ds "CUST013.MTE.JCL(CHECKVE)" -d "job-archive/version-check"
+
+#
+# Restore Maintenance Level
+#
+rexx rexxfile reset
+
+#
+# Download PTF
+#
+rexx rexxfile download
+
+#
+# Rexx Getting Started
+#
+rexx rexxfile help
+
+#
+# After updating rexxfile, run
+#
+rexx rexxfile upload
+
+#
+# Receive and Apply Check
+#
+rexx rexxfile receive
+rexx rexxfile applyCheck
+
+#
+# Rexxfile apply
+#
+rexx rexxfile apply
+
+#
+# Rexx stop
+#
+rexx rexxfile stop
+
+#
+# Rexx copy
+#
+rexx rexxfile copy
+
+#
+# APF Copy
+#
+rexx rexxfile apf
+
+#
+# Start
+#
+rexx rexxfile start
+
+#
+# Review maintenance
+#
+zowe jobs submit ds "CUST013.MTE.JCL(CHECKVE) -d "job-archive/version-check"
+
+#
+# Testing
+#
+npm test
+
+#
+# Reset Environment
+#
+rexx rexxfile reset

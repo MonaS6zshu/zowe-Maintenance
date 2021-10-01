@@ -1,0 +1,137 @@
+# Should have already been run for you
+npm install
+npm install -g gulp
+
+#
+# Create profiles
+#
+gulp setupProfiles
+
+#
+# Check Status
+#
+zowe zosmf check status
+
+zowe files list ds "CUST013.MTE.*"
+
+zowe ops show resource GS13001V
+
+
+#
+# Download Patch
+#
+zowe files download uf "/u/users/baumi07/SO07038" -f "bin/SO07038" -b
+
+ls bin
+
+#
+# Upload Patch
+#
+zowe files upload ftu "bin/SO07038" "/u/users/cust013/SO07038" -b
+
+zowe files list uss "/u/users/cust013"
+
+#
+# Look at JCL
+#
+zowe files download am "CUST013.MTE.JCL" -e jcl 
+
+#
+# Run SMPE Apply Check Job
+#
+zowe jobs submit ds "CUST013.MTE.JCL(RECEIVE)" -d "job-archive/receive"
+
+zowe jobs submit ds "CUST013.MTE.JCL(RECEIVE)" -d "job-archive/receive" --rfj
+
+zowe jobs submit ds "CUST013.MTE.JCL(APPLYCHK)" -d "job-archive/apply-chk"
+
+#
+# Run SMPE Apply job
+#
+zowe jobs submit ds "CUST013.MTE.JCL(APPLY)" -d "job-archive/apply" --rfj
+
+#
+# Stop resources
+#
+gulp stop
+
+#
+# Copy SMPE Lib
+#
+gulp copy
+
+#
+# Execute Workflow
+#
+gulp restartWorkflow
+
+#
+# APF Authorization
+#
+gulp apf
+
+# Restart SYSVIEW using OPS/MVS SSM
+gulp start
+
+zowe jobs submit ds "CUST013.MTE.JCL(CHECKVE)" -d "job-archive/version-check"
+
+#
+# Restore Maintenance Level
+#
+gulp reset
+
+#
+# Download PTF
+#
+gulp download
+
+#
+# After updating gulpfile, run
+#
+gulp upload
+
+#
+# Receive and Apply Check
+#
+gulp receive
+gulp applyCheck
+
+#
+# gulpfile apply
+#
+gulp apply
+
+#
+# gulp stop
+#
+gulp stop
+
+#
+# gulp copy
+#
+gulp copy
+
+#
+# APF Copy
+#
+gulp apf
+
+#
+# Start
+#
+gulp start
+
+#
+# Review maintenance
+#
+zowe jobs submit ds "CUST013.MTE.JCL(CHECKVE) -d "job-archive/version-check"
+
+#
+# Testing
+#
+npm test
+
+#
+# Reset Environment
+#
+gulp reset

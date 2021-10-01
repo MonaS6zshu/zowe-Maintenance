@@ -1,0 +1,17 @@
+Error:
+null
+StdErr:
+
+Data:
+{
+  "success": true,
+  "exitCode": 0,
+  "message": "",
+  "stdout": "USS file downloaded successfully.\nDestination: bin/SO07038\n",
+  "stderr": "",
+  "data": {
+    "success": true,
+    "commandResponse": "USS file downloaded successfully.\nDestination: bin/SO07038",
+    "apiResponse": {}
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-29T14:26:28.638Z",
+    "end": "2021-09-29T14:26:41.933Z",
+    "duration": 13295,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "05c51767-861f-446b-bd90-e18282d31208",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "ddb3d09d-10ec-4a18-9eb1-c137397f66bf",
+        "title": "Maintenance",
+        "fullFile": "/projects/Zowe-Maintenance-B-13/test/test.js",
+        "file": "/test/test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "f9c98fdf-9c25-4803-af52-318c77cacec2",
+            "title": "Module Check",
+            "fullFile": "/projects/Zowe-Maintenance-B-13/test/test.js",
+            "file": "/test/test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "should have maintenance applied",
+                "fullTitle": "Maintenance Module Check should have maintenance applied",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "// Get Fix Level for maintained member specified in config\ngetModuleFixLevel(config.maintainedMember, function(err, fixLevel){\n  if(err){\n    throw err;\n  }\n  assert.equal(fixLevel, config.expectedFixLevel, \"Fix level is not as expected for\" + config.maintainedMember);\n  done();\n});",
+                "err": {
+                  "message": "AssertionError [ERR_ASSERTION]: Fix level is not as expected forGSVCTIMR",
+                  "estack": "AssertionError [ERR_ASSERTION]: Fix level is not as expected forGSVCTIMR\n    at /projects/Zowe-Maintenance-B-13/test/test.js:103:16\n    at /projects/Zowe-Maintenance-B-13/test/test.js:59:11\n    at /projects/Zowe-Maintenance-B-13/node_modules/node-cmd/cmd.js:25:21\n    at ChildProcess.exithandler (child_process.js:285:7)\n    at maybeClose (internal/child_process.js:982:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)",
+                  "diff": "- SO01737\n+ SO07038\n"
+                },
+                "isRoot": false,
+                "uuid": "e37ae86c-953f-41a5-8453-00c2728cdb90",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "e37ae86c-953f-41a5-8453-00c2728cdb90"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 60000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 60000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
+}

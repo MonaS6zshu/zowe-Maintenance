@@ -1,0 +1,151 @@
+1z/OS V2 R4 BINDER     08:24:21 TUESDAY SEPTEMBER 28, 2021
+ BATCH EMULATOR  JOB(RESTORE ) STEP(SMPEUCL ) PGM= IEWL
+ IEW2278I B352 INVOCATION PARAMETERS - LIST,LET,XREF,RENT,AMODE=64,RMODE=ANY,OL,NCAL
+ IEW2322I 1220  1     ORDER   GSVCTIMR
+ IEW2322I 1220  2     ENTRY   GSVCTIMR
+ IEW2322I 1220  3    INCLUDE ANM4BLOD(GSVCTIMR)             SO07038       SEQ # 000002
+ IEW2322I 1220  4    INCLUDE CNM4BLOD(GSVCTIMR)
+ IEW2322I 1220  5    NAME GSVCTIMR(R)                       MAX ACCEPTABLE RC=08
+
+
+1                                       C R O S S - R E F E R E N C E  T A B L E
+                                        _________________________________________
+
+ TEXT CLASS = B_TEXT
+
+ ---------------  R E F E R E N C E  --------------------------  T A R G E T  -------------------------------------------
+   CLASS                            ELEMENT       |                                            ELEMENT                  |
+   OFFSET SECT/PART(ABBREV)          OFFSET  TYPE | SYMBOL(ABBREV)   SECTION (ABBREV)           OFFSET CLASS NAME       |
+                                                  |                                                                     |
+                                        *** E N D  O F  C R O S S  R E F E R E N C E ***
+
+
+
+                                 *** O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+1PROCESSING OPTIONS:
+
+    ALIASES             NO
+    ALIGN2              NO
+    AMODE                64
+    CALL                NO
+    CASE                UPPER
+    COMPAT              UNSPECIFIED
+    COMPRESS            AUTO
+    DCBS                NO
+    DYNAM               NO
+    EXTATTR             UNSPECIFIED
+    EXITS:              NONE
+    FILL                NONE
+    GID                 UNSPECIFIED
+    HOBSET              NO
+    INFO                NO
+    LET                 08
+    LINECT              060
+    LIST                SUMMARY
+    LISTPRIV            NO
+    LONGPARM            NO
+    MAP                 NO
+    MAXBLK              032760
+    MODMAP              NO
+    MSGLEVEL            00
+    OVLY                NO
+    PRINT               YES
+    RES                 NO
+    REUSABILITY         REENTRANT
+    RMODE               ANY,INITIAL
+    RMODEX              NO
+    SIGN                NO
+    STORENX             NOREPLACE
+    STRIPCL             NO
+    STRIPSEC            NO
+    SYMTRACE
+    TERM                NO
+    TRAP                ON
+    UID                 UNSPECIFIED
+    UPCASE              NO
+    WKSPACE             000000K,000000K
+    XCAL                NO
+    XREF                YES
+    ***END OF OPTIONS***
+
+
+
+
+1SAVE OPERATION SUMMARY:
+
+    MEMBER NAME         GSVCTIMR
+    LOAD LIBRARY        PRODUCT.SYSV15.SMPE13.CNM4BLOD
+    PROGRAM TYPE        PROGRAM OBJECT(FORMAT 4 OS COMPAT LEVEL z/OS V1R3 )
+    VOLUME SERIAL       USER03
+    DISPOSITION         REPLACED
+    TIME OF SAVE        08.24.21  SEP 28, 2021
+
+
+1SAVE MODULE ATTRIBUTES:
+
+    AC                  000
+    AMODE                64
+    COMPRESSION         NONE
+    DC                  NO
+    EDITABLE            YES
+    EXCEEDS 16MB        NO
+    EXECUTABLE          YES
+    LONGPARM            NO
+    MIGRATABLE          YES
+    OL                  YES
+    OVLY                NO
+    PACK,PRIME          NO,NO
+    PAGE ALIGN          NO
+    REFR                NO
+    RENT                YES
+    REUS                YES
+    RMODE               ANY
+    SCTR                NO
+    SIGN                NO
+    SSI
+    SYM GENERATED       NO
+    TEST                NO
+    XPLINK              NO
+    MODULE SIZE (HEX)   00011ED0
+    DASD SIZE (HEX)     00014000
+
+
+1 ENTRY POINT AND ALIAS SUMMARY:
+
+  NAME:            ENTRY TYPE AMODE C_OFFSET CLASS NAME        STATUS
+
+  GSVCTIMR          MAIN_EP      64 00000000 B_TEXT
+
+                          *** E N D   O F   O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+
+
+
+1z/OS V2 R4 BINDER     08:24:21 TUESDAY SEPTEMBER 28, 2021
+ BATCH EMULATOR  JOB(RESTORE ) STEP(SMPEUCL ) PGM= IEWL
+ IEW2008I 0F03 PROCESSING COMPLETED.  RETURN CODE =  0.
+
+
+
+1----------------------
+ MESSAGE SUMMARY REPORT
+ ----------------------
+  TERMINAL MESSAGES      (SEVERITY = 16)
+  NONE
+
+  SEVERE MESSAGES        (SEVERITY = 12)
+  NONE
+
+  ERROR MESSAGES         (SEVERITY = 08)
+  NONE
+
+  WARNING MESSAGES       (SEVERITY = 04)
+  NONE
+
+  INFORMATIONAL MESSAGES (SEVERITY = 00)
+  2008  2278  2322
+
+
+  **** END OF MESSAGE SUMMARY REPORT ****
+

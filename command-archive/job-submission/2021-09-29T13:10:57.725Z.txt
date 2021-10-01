@@ -1,0 +1,27 @@
+Error:
+null
+StdErr:
+
+Data:
+{
+  "success": true,
+  "exitCode": 0,
+  "message": "Submitted JCL contained in \"dataset\": \"cust013.MTE.JCL(REJECT)\"",
+  "stdout": "\u001b[33mjobid: \u001b[39m  JOB00218\n\u001b[33mretcode: \u001b[39mCC 0000\n\u001b[33mjobname: \u001b[39mREJECT\n\u001b[33mstatus: \u001b[39m OUTPUT\nSuccessfully downloaded output to ./job-archive/reject/JOB00218\n",
+  "stderr": "",
+  "data": {
+    "owner": "CUST013",
+    "phase": 20,
+    "subsystem": "JES2",
+    "phase-name": "Job is on the hard copy queue",
+    "job-correlator": "J0000218179.....DA632590.......:",
+    "type": "JOB",
+    "url": "https://35.226.100.133:443/zosmf/restjobs/jobs/J0000218179.....DA632590.......%3A",
+    "jobid": "JOB00218",
+    "class": "A",
+    "files-url": "https://35.226.100.133:443/zosmf/restjobs/jobs/J0000218179.....DA632590.......%3A/files",
+    "jobname": "REJECT",
+    "status": "OUTPUT",
+    "retcode": "CC 0000"
+  }
+}

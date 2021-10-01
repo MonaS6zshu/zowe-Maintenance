@@ -1,0 +1,21 @@
+Error:
+null
+StdErr:
+
+Data:
+{
+  "success": true,
+  "exitCode": 0,
+  "message": "",
+  "stdout": "\u001b[33msuccess: \u001b[39m\u001b[32mtrue\u001b[39m\n\u001b[33mfrom: \u001b[39m   bin/SO07038\n\u001b[33mto: \u001b[39m     /u/users/cust013/SO07038\n\n\nUSS file uploaded successfully.\n",
+  "stderr": "",
+  "data": {
+    "success": true,
+    "commandResponse": "USS file uploaded successfully.",
+    "apiResponse": {
+      "success": true,
+      "from": "bin/SO07038",
+      "to": "/u/users/cust013/SO07038"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+Error:
+null
+StdErr:
+
+Data:
+{
+  "success": true,
+  "exitCode": 0,
+  "message": "Submitted JCL contained in \"dataset\": \"cust013.MTE.JCL(RESTORE)\"",
+  "stdout": "\u001b[33mjobid: \u001b[39m  JOB08512\n\u001b[33mretcode: \u001b[39mCC 0012\n\u001b[33mjobname: \u001b[39mRESTORE\n\u001b[33mstatus: \u001b[39m OUTPUT\nSuccessfully downloaded output to ./job-archive/restore/JOB08512\n",
+  "stderr": "",
+  "data": {
+    "owner": "CUST013",
+    "phase": 20,
+    "subsystem": "JES2",
+    "phase-name": "Job is on the hard copy queue",
+    "job-correlator": "J0008512179.....DA61FB0C.......:",
+    "type": "JOB",
+    "url": "https://35.226.100.133:443/zosmf/restjobs/jobs/J0008512179.....DA61FB0C.......%3A",
+    "jobid": "JOB08512",
+    "class": "A",
+    "files-url": "https://35.226.100.133:443/zosmf/restjobs/jobs/J0008512179.....DA61FB0C.......%3A/files",
+    "jobname": "RESTORE",
+    "status": "OUTPUT",
+    "retcode": "CC 0012"
+  }
+}

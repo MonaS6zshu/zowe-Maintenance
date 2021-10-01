@@ -1,0 +1,7 @@
+Error:
+null
+StdErr:
+
+Data:
+name: /SYSVIEW/GS13001V
+current: DOWN desired: DOWN

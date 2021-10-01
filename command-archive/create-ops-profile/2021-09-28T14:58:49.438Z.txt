@@ -1,0 +1,17 @@
+Error:
+null
+StdErr:
+
+Data:
+Overwrote existing profile for bmw.
+Profile created successfully! Path:
+/home/user/.zowe/profiles/ops/bmw.yaml
+
+[33mhost: [39m              35.226.100.133
+[33mport: [39m              [34m6007[39m
+[33muser: [39m              CUST013
+[33mpassword: [39m          CUST013
+[33mprotocol: [39m          https
+[33mrejectUnauthorized: [39m[31mfalse[39m
+
+Review the created profile and edit if necessary using the profile update command.

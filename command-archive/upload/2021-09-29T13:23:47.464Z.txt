@@ -1,0 +1,19 @@
+Error:
+Error: Command failed: zowe files upload ftu"bin/SO07038"  "/u/users/cust013/SO07038" -b --rfj
+
+StdErr:
+
+Data:
+{
+  "success": false,
+  "exitCode": 1,
+  "message": "Unknown arguments: b, ftubin/SO07038, /u/users/cust013/SO07038\nCommand failed due to improper syntax\nCommand entered: \"zowe files upload ftubin/SO07038 /u/users/cust013/SO07038 -b --rfj\"\nAvailable commands are \"file-to-data-set, stdin-to-data-set, dir-to-pds, file-to-uss, dir-to-uss\".\nUse \"zowe files upload --help\" to view groups, commands, and options.",
+  "stdout": "",
+  "stderr": "Command Error:\nUnknown arguments: b, ftubin/SO07038, /u/users/cust013/SO07038\nCommand failed due to improper syntax\nCommand entered: \"zowe files upload ftubin/SO07038 /u/users/cust013/SO07038 -b --rfj\"\nAvailable commands are \"file-to-data-set, stdin-to-data-set, dir-to-pds, file-to-uss, dir-to-uss\".\nUse \"zowe files upload --help\" to view groups, commands, and options.\nError Details:\nUnknown arguments: b, ftubin/SO07038, /u/users/cust013/SO07038\n",
+  "data": {},
+  "error": {
+    "msg": "Unknown arguments: b, ftubin/SO07038, /u/users/cust013/SO07038\nCommand failed due to improper syntax\nCommand entered: \"zowe files upload ftubin/SO07038 /u/users/cust013/SO07038 -b --rfj\"\nAvailable commands are \"file-to-data-set, stdin-to-data-set, dir-to-pds, file-to-uss, dir-to-uss\".\nUse \"zowe files upload --help\" to view groups, commands, and options.",
+    "causeErrors": {},
+    "additionalDetails": "Unknown arguments: b, ftubin/SO07038, /u/users/cust013/SO07038"
+  }
+}

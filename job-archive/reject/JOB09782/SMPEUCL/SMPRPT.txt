@@ -1,0 +1,95 @@
+1PAGE 0001  - NOW SET TO GLOBAL ZONE          DATE 09/29/21  TIME 03:47:42  SMP/E 37.08   SMPRPT   OUTPUT
+
+   REJECT
+     SELECT(SO07038)
+     BYPASS(APPCHK)
+        .
+1PAGE 0002  - NOW SET TO GLOBAL ZONE          DATE 09/29/21  TIME 03:47:42  SMP/E 37.08   SMPRPT   OUTPUT
+
+
+                               REJECT SUMMARY REPORT FOR SELECT MODE
+
+
+
+  ZONES CHECKED            NOTE:  * - ZONESET NAME     # - ZONE NAME IN A ZONESET
+
+     DLIB     -  CAID
+
+     TARGET   -  (NONE)
+
+
+
+
+ NOT REJECTED REPORT
+
+     FMIDS NOT DELETED FROM THE GLOBAL ZONE FMID SUBENTRY
+
+         (NONE)
+
+     SYSMODS NOT REJECTED
+
+         SYSMOD    COMMENT
+
+         (NONE)
+
+
+
+
+ SUCCESSFULLY REJECTED REPORT
+
+     FMIDS DELETED FROM THE GLOBAL ZONE FMID SUBENTRY
+
+         (NONE)
+
+     SYSMODS REJECTED
+
+         SO07038
+
+     FEATURE ENTRIES REJECTED
+
+         NAME      DESCRIPTION
+
+         (NONE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1PAGE 0003  - NOW SET TO GLOBAL ZONE          DATE 09/29/21  TIME 03:47:42  SMP/E 37.08   SMPRPT   OUTPUT
+
+
+                               REJECT SUMMARY REPORT FOR SELECT MODE - PRODUCT ENTRIES REJECTED
+
+
+
+         PRODID    VRM       DESCRIPTION
+
+         (NONE)
+1PAGE 0004  - NOW SET TO GLOBAL ZONE          DATE 09/29/21  TIME 03:47:42  SMP/E 37.08   SMPRPT   OUTPUT
+
+
+                                           SMP REJECT   FILE ALLOCATION REPORT
+
+
+ ZONE    DDNAME   DDDEFNAM SMPDDNAM TYPE    --------------DATA SET OR PATH-------------- VOLSER UNIT     STATUS
+
+         SMPCNTL                    SYSIO   CUST013.REJECT.JOB09782.D0000101.?                            NEW
+         SMPCSI                     PERM    PRODUCT.SYSV15.SMPE13.CSI                    USER03           SHR
+         SMPLOG                     SYSIO   CUST013.REJECT.JOB09782.D0000102.?                            MOD
+         SMPLOGA  SMPLOGA           PERM    PRODUCT.SYSV15.SMPE13.SMPLOGA                USER03           MOD
+         SMPOUT   SMPOUT            SYSIO   CUST013.REJECT.JOB09782.D0000103.?                            MOD
+         SMPPARM  SMPPARM           NODDF
+         SMPPTS   SMPPTS            PERM    PRODUCT.SYSV15.SMPE13.SMPPTS                 USER03           SHR
+         SMPRPT   SMPRPT            SYSIO   CUST013.REJECT.JOB09782.D0000104.?                            MOD
+         SYSUT1   SYSUT1            PERM    SYS21272.T034742.RA000.REJECT.R0116660       WORK01 SYSDA     NEW
+         SYSUT2   SYSUT2            PERM    SYS21272.T034742.RA000.REJECT.R0116661       WORK01 SYSDA     NEW
+         SYSUT3   SYSUT3            PERM    SYS21272.T034742.RA000.REJECT.R0116662       WORK01 SYSDA     NEW

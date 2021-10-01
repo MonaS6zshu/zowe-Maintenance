@@ -1,0 +1,139 @@
+1PAGE 0001  - NOW SET TO TARGET ZONE CAIT     DATE 09/27/21  TIME 10:59:08  SMP/E 37.08   SMPRPT   OUTPUT
+
+    APPLY
+      REDO
+      SELECT(SO07038)
+      BYPASS(HOLDSYSTEM(DOC,RESTART))
+          GROUP .
+1PAGE 0002  - NOW SET TO TARGET ZONE CAIT     DATE 09/27/21  TIME 10:59:08  SMP/E 37.08   SMPRPT   OUTPUT
+
+ BYPASSED HOLD REASON REPORT FOR APPLY PROCESSING
+
+ TYPE    REASON ID  FMID     SYSMOD   ++HOLD DATA
+ ------  ---------  -------  -------  ------------------------------------------------------------------------
+ SYSTEM  DOC        CNM4F00  SO07038  ++HOLD (SO07038) SYSTEM FMID(CNM4F00)
+                                        REASON (DOC    )   DATE (19022)
+                                        COMMENT (
+                                      +----------------------------------------------------------------------+
+                                      |     CA SYSVIEW PERFORMANCE MANAGEMENT               Version 15.0     |
+                                      +----------------------------------------------------------------------+
+                                                            ***************************
+                                                            *       PUBLICATION       *
+                                                            ***************************
+                                      This fix changes the minimum allowable value for the TRAN-THRESHOLDS
+                                      CICS schedule event from 2 seconds to 1 second. This definition is
+                                      in the CICSSCHD parmlib member if doing COLD starts, or online on the
+                                      CSCHEDUL display if doing WARM starts. The maximum and default values
+                                      remain unchanged; this fix has no impact on your existing definition.
+
+                                                       Old          New
+                                                       --------     --------
+                                              Default  00:00:15     00:00:15
+                                              Minimum  00:00:02     00:00:01
+                                              Maximum  00:02:00     00:02:00
+
+                                      A reminder that changing any scheduled event to run more often will
+                                      cause a corresponding increase in CPU usage for that function over
+                                      time.
+                                                ).
+
+         RESTART    CNM4F00  SO07038  ++HOLD (SO07038) SYSTEM FMID(CNM4F00)
+                                        REASON (RESTART)   DATE (19022)
+                                        COMMENT (
+                                      +----------------------------------------------------------------------+
+                                      |     CA SYSVIEW PERFORMANCE MANAGEMENT               Version 15.0     |
+                                      +----------+-----------------------------------------------------------+
+                                      |SEQUENCE  | Before Restart                                            |
+                                      +----------+-----------------------------------------------------------+
+                                      |PURPOSE   | To implement the fix.                                     |
+                                      +----------+-----------------------------------------------------------+
+                                      |USERS     | All users of SYSVIEW for CICS.                            |
+                                      |AFFECTED  |                                                           |
+                                      +----------+-----------------------------------------------------------+
+                                      |KNOWLEDGE | Product Administration                                    |
+                                      |REQUIRED  | CICS Systems Programming                                  |
+                                      +----------+-----------------------------------------------------------+
+                                      |ACCESS    | Product libraries                                         |
+                                      |REQUIRED  | Ability to run SYSVIEW for CICS transactions              |
+                                      +----------+-----------------------------------------------------------+
+                                                            **************************
+                                                            * STEPS    TO    PERFORM *
+                                                            **************************
+                                      Apply this fix and either recycle the CICS region, or use the
+                                      GSVT (terminate) and GSVS (start) transactions to recycle
+                                      SYSVIEW for CICS within the CICS region.
+                                                ).
+1PAGE 0003  - NOW SET TO TARGET ZONE CAIT     DATE 09/27/21  TIME 10:59:08  SMP/E 37.08   SMPRPT   OUTPUT
+
+ SUMMARY OF BYPASSED AND UNRESOLVED HOLD REASON REPORT FOR APPLY PROCESSING
+
+ NOTE: SEE THE HOLDDATA REPORT OF UNRESOLVED HOLD REASON IDS TO DETERMINE HOLDS CAUSING SYSMOD TERMINATIONS.
+       SEE THE HOLDDATA REPORT OF BYPASSED HOLD REASON IDS TO DETERMINE HOLDS THAT WERE BYPASSED.
+
+ TYPE    REASON ID  REPORT      SYSMODS AFFECTED
+ ------  ---------  ----------  -------------------------------------------------------------------------------
+ SYSTEM  DOC        BYPASSED    SO07038
+
+         RESTART    BYPASSED    SO07038
+1PAGE 0004  - NOW SET TO TARGET ZONE CAIT     DATE 09/27/21  TIME 10:59:08  SMP/E 37.08   SMPRPT   OUTPUT
+
+ SYSMOD STATUS REPORT FOR APPLY PROCESSING                  SYSMODS APPLIED  - 1
+
+   NOTE:  '-' INDICATES THE REQUISITE SYSMOD OR HOLD CONDITION IS NOT SATISFIED
+          '*' INDICATES THE NON SATISFIED REQUISITE SYSMOD OR HOLD CONDITION IS BYPASSED
+          '#' INDICATES THE SUPERSEDING SYSMOD WAS NOT PROCESSED
+
+ SYSMOD   STATUS    TYPE      FMID     REQUISITE SYSMODS, SUPBY SYSMODS, HOLD REASON-IDS, AND CAUSER SYSMODS
+
+ SO07038  APPLIED   PTF       CNM4F00  PRE      SO00378   SO01737   SO03940
+                                       HOLDS   *DOC(SO07038)       *RESTART(SO07038)
+1PAGE 0005  - NOW SET TO TARGET ZONE CAIT     DATE 09/27/21  TIME 10:59:08  SMP/E 37.08   SMPRPT   OUTPUT
+
+ ELEMENT SUMMARY REPORT FOR APPLY PROCESSING
+
+
+ ELEMENT  ELEMENT  ELEMENT  CURRENT CURRENT DISTLIB  SYSLIB   ASSEM    LOAD     LMOD              SYSMOD  SYSMOD
+ TYPE     NAME     STATUS   FMID    RMID    LIBRARY  LIBRARY  NAMES    MODULE   SYSLIB            NAME    STATUS
+
+ MOD      GSVCTIMR APPLIED  CNM4F00 SO07038 ANM4BLOD                   GSVCTIMR CNM4BLOD          SO07038 APPLIED
+
+ HELP     GSV62330 APPLIED  CNM4F00 SO07038 ANM4BHLP CNM4BHLP                                     SO07038 APPLIED
+1PAGE 0006  - NOW SET TO TARGET ZONE CAIT     DATE 09/27/21  TIME 10:59:09  SMP/E 37.08   SMPRPT   OUTPUT
+
+
+                                           SMP APPLY    FILE ALLOCATION REPORT
+
+
+ ZONE    DDNAME   DDDEFNAM SMPDDNAM TYPE    --------------DATA SET OR PATH-------------- VOLSER UNIT     STATUS
+
+         CNM4BHLP CNM4BHLP          PERM    PRODUCT.SYSV15.SMPE13.CNM4BHLP               USER03           SHR
+         CNM4BLOD CNM4BLOD          PERM    PRODUCT.SYSV15.SMPE13.CNM4BLOD               USER03           SHR
+         SMPCNTL                    SYSIO   CUST013.APPLY.JOB06248.D0000101.?                             NEW
+         SMPCSI                     PERM    PRODUCT.SYSV15.SMPE13.CSI                    USER03           SHR
+         SMPDUMMY                   DUMMY
+         SMPHRPT  SMPHRPT           NODDF
+         SMPJHOME SMPJHOME          NODDF
+         SMPLOG                     SYSIO   CUST013.APPLY.JOB06248.D0000102.?                             MOD
+         SMPLOGA  SMPLOGA           PERM    PRODUCT.SYSV15.SMPE13.SMPLOGA                USER03           MOD
+         SMPLTS   SMPLTS            PERM    PRODUCT.SYSV15.SMPE13.SMPLTS                 USER03           SHR
+         SMPMTS   SMPMTS            PERM    PRODUCT.SYSV15.SMPE13.SMPMTS                 USER03           SHR
+         SMPOUT   SMPOUT            SYSIO   CUST013.APPLY.JOB06248.D0000103.?                             MOD
+         SMPPARM  SMPPARM           NODDF
+         SMPPTS   SMPPTS            PERM    PRODUCT.SYSV15.SMPE13.SMPPTS                 USER03           SHR
+         SMPRPT   SMPRPT            SYSIO   CUST013.APPLY.JOB06248.D0000104.?                             MOD
+         SMPSCDS  SMPSCDS           PERM    PRODUCT.SYSV15.SMPE13.SMPSCDS                USER03           SHR
+         SMPSTS   SMPSTS            PERM    PRODUCT.SYSV15.SMPE13.SMPSTS                 USER03           SHR
+         SMPWKDIR SMPWKDIR          NODDF
+         SMPWRK1  SMPWRK1           PERM    SYS21270.T105908.RA000.APPLY.R0111999        WORK01 SYSDA     NEW
+         SMPWRK2  SMPWRK2           PERM    SYS21270.T105908.RA000.APPLY.R0112000        WORK01 SYSDA     NEW
+         SMPWRK3  SMPWRK3           PERM    SYS21270.T105908.RA000.APPLY.R0112001        WORK01 SYSDA     NEW
+         SMPWRK4  SMPWRK4           PERM    SYS21270.T105908.RA000.APPLY.R0112002        WORK01 SYSDA     NEW
+         SMPWRK6  SMPWRK6           PERM    SYS21270.T105908.RA000.APPLY.R0112003        WORK01 SYSDA     NEW
+         SMP00002                   SYSIO   CUST013.APPLY.JOB06248.D0000106.?                             MOD
+         SMP00003                   TEMP    SYS21270.T105908.RA000.APPLY.R0112008        WORK01 SYSDA     NEW
+         SMP00004                   TEMP    SYS21270.T105908.RA000.APPLY.R0112009        WORK01 SYSDA     NEW
+         SYSPRINT SYSPRINT          SYSIO   CUST013.APPLY.JOB06248.D0000105.?                             MOD
+         SYSUT1   SYSUT1            PERM    SYS21270.T105908.RA000.APPLY.R0112004        WORK01 SYSDA     NEW
+         SYSUT2   SYSUT2            PERM    SYS21270.T105908.RA000.APPLY.R0112005        WORK01 SYSDA     NEW
+         SYSUT3   SYSUT3            PERM    SYS21270.T105908.RA000.APPLY.R0112006        WORK01 SYSDA     NEW
+         SYSUT4   SYSUT4            PERM    SYS21270.T105908.RA000.APPLY.R0112007        WORK01 SYSDA     NEW
